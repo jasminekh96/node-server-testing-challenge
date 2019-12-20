@@ -18,8 +18,8 @@ server.get('/', (req, res) => {
 
 server.post('/', (req, res) => {
 	Dinosaurs.insert(req.body)
-		.then((id) => {
-			res.status(201).json(id);
+		.then((dinosaur) => {
+			res.status(201).json(dinosaur);
 		})
 		.catch((error) => {
 			res.status(500).json(error);
